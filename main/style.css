@@ -1,0 +1,54 @@
+/* Ensure that only the active image is visible */
+.pics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none; /* Initially hide all images */
+}
+
+.pics img.active-slide {
+  display: block; /* Only show the active image */
+}
+
+/* Styling for Navigation Buttons */
+#prev-btn, #next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#prev-btn {
+  left: 20px;
+}
+
+#next-btn {
+  right: 20px;
+}
+
+#prev-btn:hover, #next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header-content {
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* 高い値に設定 */
+  background-color: rgba(0, 0, 0, 0.7); /* 必要なら背景色も設定 */
+}
+
+.name h1 {
+  font-size: 24px;
+  display: block;
+  color: white;
+}
