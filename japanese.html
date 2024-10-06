@@ -16,12 +16,12 @@
   <style type="text/css">
 	body {
 		font-family: 'Futura', 'Arial', sans-serif;
-		background-color: #ffffff; /* 背景色 */
+		background-color: #ffffff;
 		color: white;
 		margin: 0;
 		padding: 0;
 	}
-	/* 名前とナビゲーションリンクを持つヘッダー */
+	
 	.header-content {
 		width: 100%;
 		padding: 20px;
@@ -42,14 +42,14 @@
 		color: white;
 	}
 
-	/* 左側のリンク */
+	
 	.left-links {
 	  padding: 0;
 	  background: transparent;
 	  position: fixed;
 	  left: 50px;
 	  top: 200px;
-	  z-index: 200;  /* スライドショーの上に配置 */
+	  z-index: 200; 
 	  cursor: default;
 	}
 
@@ -68,7 +68,7 @@
 		opacity: 0;
 	  }
 
-	/* スライドショー */
+	
 	#bg {
 	  position: relative;
 	  width: 100%;
@@ -92,7 +92,6 @@
 	  position: absolute;
 	}
 
-	/* 画像上のクリック可能な領域 */
 	.click-area {
 	  position: absolute;
 	  top: 0;
@@ -109,8 +108,7 @@
 	.right-half {
 	  right: 0;
 	}
-
-	/* Footer */
+	  
 	footer {
 		text-align: left;
 		padding: 10px 0;
@@ -123,25 +121,24 @@
 	}
   </style>
 
-  <!-- jQueryの更新 -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- スライドショープラグイン -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
 
   <script type="text/javascript">
 	$(document).ready(function () {
 	  $('#slideshow').cycle({
-		fx: 'fade',  // フェードトランジション効果を使用
-		timeout: 0,  // 自動スクロールを無効にする
-		pause: 1  // ホバー時にスライドショーを一時停止
+		fx: 'fade',  
+		timeout: 0,  
+		pause: 1  
 	  });
 
-	  // 左側をクリックすると前の画像に移動
+	  
 	  $('.left-half').click(function() {
 		$('#slideshow').cycle('prev');
 	  });
 
-	  // 右側をクリックすると次の画像に移動
+	  
 	  $('.right-half').click(function() {
 		$('#slideshow').cycle('next');
 	  });
@@ -151,7 +148,6 @@
 
 <body>
 
-  <!-- 左側のリンク -->
   <div class="left-links">
 	<a href="https://www.helabucb.org/aging">研究</a><br />
 	<a href="Profile.html">プロフィール</a><br />
@@ -163,28 +159,23 @@
 	<a href="Random.html">Misc</a><br />
   </div>
 
-  <!-- ヘッダー -->
   <div class="header-content">
 	<div class="name">
-	  <h1>Yuki Noguchi Ph.D.</h1>
+	  <h1>Yuki Noguchi (野口 勇貴) Ph.D.</h1>
 	</div>
   </div>
 
-  <!-- スライドショーセクション -->
   <div id="bg">
 	<div id="slideshow" class="pics">
 	  <img src="img/main.1.jpg" alt="Image 1" class="active-slide" />
 	  <img src="img/main.2.jpg" alt="Image 2" class="inactive-slide" />
 	  <img src="img/main.3.jpg" alt="Image 2" class="inactive-slide" />
-	  <!-- 必要に応じてさらに画像を追加 -->
 	</div>
 
-	<!-- 画像上のクリック可能な領域 -->
 	<div class="click-area left-half"></div>
 	<div class="click-area right-half"></div>
   </div>
 
-  <!-- フッター -->
   <footer>
 	<p>© 2024 Yuki Noguchi. All rights reserved.</p>
   </footer>
