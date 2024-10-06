@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>Yuki Noguchi Ph.D.</title>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Yuki Noguchi Personal Website" />
+  <meta name="keywords" content="Yuki Noguchi, Research, Publications, Profile" />
+  <meta name="copyright" content="Copyright 2024" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="preload" href="path-to-your-font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+  <style type="text/css">
+	body {
+		font-family: 'Futura', 'Arial', sans-serif;
+		background-color: #ffffff; /* Black background */
+		color: white;
+		margin: 0;
+		padding: 0;
+	}
+	/* Header with Name and Navigation Links */
+	.header-content {
+		width: 100%;
+		padding: 20px;
+		position: fixed;
+		top: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 1000;
+	}
+
+	.name {
+		margin-left: 30px;
+	}
+
+	.name h1 {
+		font-size: 24px;
+		color: white;
+	}
+
+	/* Links on Left Side */
+	.left-links {
+	  padding: 0;
+	  background: transparent;
+	  position: fixed;
+	  left: 50px;
+	  top: 200px;
+	  z-index: 200;  /* Ensure it stays above the slideshow */
+	  cursor: default;
+	}
+
+	.left-links a {
+	  color: white;
+	  text-decoration: none;
+	  font-size: 16px;
+	  line-height: 2;
+	}
+
+	.left-links a:hover {
+	  color: #ffffff;
+	}
+	
+	.left-links a[href="Random.html"] {
+		opacity: 0;
+	  }
+	
+	/* Slideshow */
+	#bg {
+	  position: relative;
+	  width: 100%;
+	  height: 100%;
+	  margin: 0 auto;
+	}
+
+	.pics {
+	  height: 100%;
+	  width: 100%;
+	  margin: auto;
+	  position: relative;
+	}
+
+	.pics img {
+	  padding: 0;
+	  border: 0;
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  position: absolute;
+	}
+
+	/* Invisible clickable areas */
+	.click-area {
+	  position: absolute;
+	  top: 0;
+	  width: 50%;
+	  height: 100%;
+	  z-index: 101;
+	  cursor: pointer;
+	}
+
+	.left-half {
+	  left: 0;
+	}
+
+	.right-half {
+	  right: 0;
+	}
+
+	/* Footer */
+	footer {
+		text-align: left;
+		padding: 10px 0;
+		background-color: #ffffff
+		color: white;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: 1000; /* Ensure footer is not hidden by other elements */
+	}
+  </style>
+
+  <!-- Updated jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Cycle Plugin for Slideshow -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
+
+  <script type="text/javascript">
+	$(document).ready(function () {
+	  $('#slideshow').cycle({
+		fx: 'fade',  // Use the fade transition effect
+		timeout: 0,  // Disable automatic scrolling
+		pause: 1  // Pause the slideshow on hover
+	  });
+
+	  // Click on left side to go to the previous image
+	  $('.left-half').click(function() {
+		$('#slideshow').cycle('prev');
+	  });
+
+	  // Click on right side to go to the next image
+	  $('.right-half').click(function() {
+		$('#slideshow').cycle('next');
+	  });
+	});
+  </script>
+</head>
+
+<body>
+
+  <!-- Left-Side Links -->
+  <div class="left-links">
+	<a href="https://www.helabucb.org/aging">Research</a><br />
+	<a href="Profile.html">Profile</a><br />
+	<a href="Publication.html">Publication</a><br />
+	<a href="Grant.html">Grant</a><br />
+	<a href="News.html">News</a><br />
+	<a href="https://mcb.berkeley.edu/directory/search/detail/8614">Contact</a><br />
+	<a href="japanese.html">日本語</a><br />
+	<a href="Random.html">Misc</a><br />
+  </div>
+
+  <!-- Header -->
+  <div class="header-content">
+	<div class="name">
+	  <h1>Yuki Noguchi Ph.D.</h1>
+	</div>
+  </div>
+
+  <!-- Slideshow Section -->
+  <div id="bg">
+	<div id="slideshow" class="pics">
+	  <img src="img/main.1.jpg" alt="Image 1" class="active-slide" />
+	  <img src="img/main.2.jpg" alt="Image 2" class="inactive-slide" />
+	  <img src="img/main.3.jpg" alt="Image 2" class="inactive-slide" />
+	  <!-- You can add more images if needed -->
+	</div>
+
+	<!-- Invisible clickable areas over the image -->
+	<div class="click-area left-half"></div>
+	<div class="click-area right-half"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+	<p>© 2024 Yuki Noguchi. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
