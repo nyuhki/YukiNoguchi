@@ -1,16 +1,14 @@
-/* Ensure that only the active image is visible */
 .pics img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: none; /* Initially hide all images */
+  display: none;
 }
 
 .pics img.active-slide {
-  display: block; /* Only show the active image */
+  display: block; 
 }
 
-/* Styling for Navigation Buttons */
 #prev-btn, #next-btn {
   position: absolute;
   top: 50%;
@@ -43,8 +41,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000; /* 高い値に設定 */
-  background-color: rgba(0, 0, 0, 0.7); /* 必要なら背景色も設定 */
+  z-index: 1000; 
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .name h1 {
