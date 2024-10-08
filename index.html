@@ -16,12 +16,12 @@
   <style type="text/css">
 	body {
 		font-family: 'Futura', 'Arial', sans-serif;
-		background-color: #ffffff; /* Black background */
+		background-color: #ffffff;
 		color: white;
 		margin: 0;
 		padding: 0;
 	}
-	/* Header with Name and Navigation Links */
+
 	.header-content {
 		width: 100%;
 		padding: 20px;
@@ -42,14 +42,14 @@
 		color: white;
 	}
 
-	/* Links on Left Side */
+	
 	.left-links {
 	  padding: 0;
 	  background: transparent;
 	  position: fixed;
 	  left: 50px;
 	  top: 200px;
-	  z-index: 200;  /* Ensure it stays above the slideshow */
+	  z-index: 200;  
 	  cursor: default;
 	}
 
@@ -68,7 +68,6 @@
 		opacity: 0;
 	  }
 	
-	/* Slideshow */
 	#bg {
 	  position: relative;
 	  width: 100%;
@@ -92,7 +91,6 @@
 	  position: absolute;
 	}
 
-	/* Invisible clickable areas */
 	.click-area {
 	  position: absolute;
 	  top: 0;
@@ -110,7 +108,6 @@
 	  right: 0;
 	}
 
-	/* Footer */
 	footer {
 		text-align: left;
 		padding: 10px 0;
@@ -119,7 +116,7 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		z-index: 1000; /* Ensure footer is not hidden by other elements */
+		z-index: 1000;
 	}
   </style>
 
@@ -131,9 +128,9 @@
   <script type="text/javascript">
 	$(document).ready(function () {
 	  $('#slideshow').cycle({
-		fx: 'fade',  // Use the fade transition effect
-		timeout: 0,  // Disable automatic scrolling
-		pause: 1  // Pause the slideshow on hover
+		fx: 'fade', 
+		timeout: 0,
+		pause: 1 
 	  });
 
 	  // Click on left side to go to the previous image
@@ -176,7 +173,6 @@
 	  <img src="img/main.1.jpg" alt="Image 1" class="active-slide" />
 	  <img src="img/main.2.jpg" alt="Image 2" class="inactive-slide" />
 	  <img src="img/main.3.jpg" alt="Image 2" class="inactive-slide" />
-	  <!-- You can add more images if needed -->
 	</div>
 
 	<!-- Invisible clickable areas over the image -->
